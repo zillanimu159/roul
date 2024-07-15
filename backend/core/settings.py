@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-1=(8mhsl9&mz750hn@h_2faot73462!30%lxxdla0%+k_tiv88'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['13.56.13.249']
 
 
 # Application definition
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'recipes',
 ]
 
-CORS_ALLOWED_ORIGINS = ['http://localhost:5173']
+CORS_ALLOWED_ORIGINS = ['*']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
