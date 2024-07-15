@@ -8,12 +8,16 @@ function NewPost({ onAddPost }) {
         <Modal>
             <Form method='post' className={styles.form}>
                 <p>
-                    <label htmlFor="body">Text</label>
-                    <textarea id="body" name="body" required rows={3}/>
+                    <label htmlFor="ingredients">Ingredients</label>
+                    <textarea id="ingredients" name="ingredients" required rows={3}/>
                 </p>
                 <p>
-                    <label htmlFor="name">Your name</label>
-                    <input type="text" id="name" name="author" required />
+                    <label htmlFor="steps">Steps</label>
+                    <textarea id="steps" name="steps" required rows={3}/>
+                </p>
+                <p>
+                    <label htmlFor="title">Recipe Name</label>
+                    <input type="title" id="title" name="title" required />
                 </p>
                 <p className={styles.actions}>
                     <Link type='button' to="..">Cancel</Link>
@@ -29,7 +33,8 @@ export default NewPost;
 export async function action({ request }){
     const formData = await request.formData();
     const postData = Object.fromEntries(formData);
-    await fetch("http://localhost:8080/posts", {
+    console.log(postData)
+    await fetch(`${import.meta.env.VITE_API_URL}`, {
         method: "POST",
         body: JSON.stringify(postData),
         headers: { 'Content-Type': 'application/json' }

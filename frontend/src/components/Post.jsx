@@ -6,7 +6,8 @@ function Post(props) {
         <li className={styles.post}>
             <Link to={props.id}>
                 <p className={styles.author}>{props.author}</p>
-                <p className={styles.text}>{props.body}</p>
+                <p className={styles.text}>{props.ingredients}</p>
+                <p className={styles.text}>{props.steps}</p>
             </Link>
         </li>);
 }
