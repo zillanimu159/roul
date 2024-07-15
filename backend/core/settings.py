@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'recipes',
 ]
 
-CORS_ALLOWED_ORIGINS = ['*']
+CORS_ALLOWED_ORIGINS = ['http://zilla-website-bucket.s3-website-us-west-1.amazonaws.com']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
