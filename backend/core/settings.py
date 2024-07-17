@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-1=(8mhsl9&mz750hn@h_2faot73462!30%lxxdla0%+k_tiv88
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['13.56.254.39']
+ALLOWED_HOSTS = ['13.56.13.249']
 
 
 # Application definition
@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'recipes',
 ]
 
-CORS_ALLOWED_ORIGINS = ['https://d1l95rtbgqog8g.cloudfront.net', 'http://localhost:5173']
+CORS_ALLOWED_ORIGINS = ['http://zilla-website-bucket.s3-website-us-west-1.amazonaws.com', 'http://localhost:5173', 'https://d1l95rtbgqog8g.cloudfront.net']
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
