@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 function MainHeader({ onCreatePost }) {
   return (
     <header className={classes.header}>
-      <h1 className={classes.logo}>React Poster</h1>
+      <h1 className={classes.logo}>Recipe List</h1>
       <p>
         <Link className={classes.button} to="/create-post">
-          New Post
+          Add Recipe
         </Link>
       </p>
     </header>
